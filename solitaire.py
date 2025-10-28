@@ -1,3 +1,7 @@
+git remote add origin https://github.com/RidhimaKoninty/text_based_solitaire.git
+git branch -M main
+git push -u origin main
+
 import math, random
 class Card:
     def __init__(self, suit, rank, faceUp=False):
