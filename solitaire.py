@@ -198,7 +198,7 @@ class Solitaire:
         else:
             print("discard pile is empty")
             
-    ##FINISH THIS ONE
+   
     def discardToTableau(self, destination):
         destination-=1
         
@@ -214,7 +214,7 @@ class Solitaire:
                     self.discard.append(discard)
                     print ("cards must alternate color and be lower value")
                     return 
-            elif discard.cardValue()==13 and self.tableau[destination]==0:
+            elif discard.cardValue()==13 and len(self.tableau[destination])==0:
                 self.tableau[destination].append(discard)
                 print( "moved ", discard.returnCard, " to pile", destination+1)
             else:
@@ -224,7 +224,6 @@ class Solitaire:
         else:
             print("discard is empty")
             return
-    ##
         
     def tableauToFoundation(self, tableauNum):
         if(len(self.tableau[tableauNum]) > 0):
@@ -298,8 +297,6 @@ class Solitaire:
                 return "invalid"
                 
                 
-    ###    
-        
         
     def flipCard(self, tableauNum):
         if(len(self.tableau[tableauNum])>0):
